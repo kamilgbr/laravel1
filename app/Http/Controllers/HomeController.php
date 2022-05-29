@@ -27,7 +27,8 @@ class HomeController extends Controller
      */
 
     public function start(){
-
+     
+    
         return view('home');
 
     }
@@ -54,8 +55,12 @@ class HomeController extends Controller
         error_log("Nadwozie: ".$nadwozie);
 
       
+      $test = Cars1::all();
+        
+
       
-        $test = Cars1::all();
+        
+        
         
         $call = $test->filter(function($choose){
 
@@ -116,8 +121,7 @@ class HomeController extends Controller
 
         error_log('id');
 
-        return redirect()->route('home/index', ['request' => $call]);
-        
+        return redirect()->route('savedcar.saved');
 
     } 
         
@@ -126,7 +130,7 @@ class HomeController extends Controller
        
   
         //return view("mycar.mycarphp", compact("posts"));
-        return redirect()->route('mycar.mycarphp', ['request' => $call]);
+        return redirect()->route('home', ['request' => $call]);
  
       
 

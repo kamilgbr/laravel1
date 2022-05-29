@@ -17,6 +17,7 @@ class User extends Eloquent implements Authenticatable, CanResetPasswordContract
     use CanResetPassword;
 
     protected $connection = 'mongodb';
+    protected $table = 'users';
 
     /**
      * The attributes that are mass assignable.
@@ -25,6 +26,7 @@ class User extends Eloquent implements Authenticatable, CanResetPasswordContract
      */
     protected $fillable = [
         'name',
+        'lastname',
         'email',
         'password',
         'role',

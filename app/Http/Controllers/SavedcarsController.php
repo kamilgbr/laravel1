@@ -39,6 +39,7 @@ class SavedcarsController extends Controller
 
         
         }
+
        public function delete($_id){
 
         error_log("Usuń");
@@ -53,17 +54,10 @@ class SavedcarsController extends Controller
 
         }
 
-       }
-           
-    //    public function createPDF() {
-    //     // retreive all records from db
-    //     $data = UserCar::all();
-    //     // share data to view
-    //     view()->share('savedcars',$data);
-    //     $pdf = PDF::loadView('pdf_view', $data);
-    //     // download PDF file with download method
-    //     return $pdf->download('pdf_file.pdf');
-    //   }
+        
 
+    }
+
+ 
 
 }

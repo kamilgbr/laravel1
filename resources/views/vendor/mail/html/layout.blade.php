@@ -13,6 +13,7 @@ width: 100% !important;
 
 .footer {
 width: 100% !important;
+
 }
 }
 

@@ -13,9 +13,33 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                
+                    
+                    <a hidden>{{$id = Auth::id();}}</a>
+                    @if(isset($id))
+                    
+                  
                     {{-- <a class="btn btn-primary" href="{{ URL::to('/savedcars/pdf') }}">Eksportuj do PDF</a> --}}
-                   
+                    @foreach ($cars1 as $mess1)
+                    @foreach ($cars as $mess)
+                  
+                    @endforeach
+                    @endforeach
+                    
+                    {{-- @if(@isset($mess))
+                    @if(($mess['id_uzytkownika'] == $id)) 
+
+                    <div class="alert alert-primary" role="alert">
+                     Zapisane samochody: {{count($mess['znacznik'])}}
+                    </div>
+ 
+                   @endif 
+                   @endisset --}}
+                   @if(!@isset($mess))
+                   <div class="alert alert-warning" role="alert">
+                    Nie masz zapisanych żadnych samochodów. Wyszukaj samochody na <a href="home">Stronie Głównej</a> aby dodać do listy ulubionych.
+                   </div> 
+                   @endisset
+              
                   
                     @foreach ($cars1 as $item1)
                     @foreach ($cars as $item)
@@ -28,7 +52,7 @@
                           
                            <div class="col-md-4">
                          <img height="300" src="{{ asset($item1['LinkIMG']) }}" class="img-fluid rounded-start" alt="Oferta wygasła"><br>
-                             <a style="max-width: auto;" class="btn btn-warning btn-sm" href="{{$item1['Link']}}"> <b>PRZEJDŹ DO OFERTY</b> </a>
+                         <a style="max-width: auto;" class="btn btn-secondary position-absolute bottom-0 start-0" target="_blank" href="{{$item1['Link']}}"> Przejdź do oferty</a>
                             
                            </div>
                          <div class="col-md-8">
@@ -72,7 +96,7 @@
                          
                           <div class="col-md-4">
                         <img height="300" src="{{ asset($item1['LinkIMG']) }}" class="img-fluid rounded-start" alt="Oferta wygasła"><br>
-                            <a style="max-width: auto;" class="btn btn-warning btn-sm" href="{{$item1['Link']}}"> <b>PRZEJDŹ DO OFERTY</b> </a>
+                        <a style="max-width: auto;" class="btn btn-secondary position-absolute bottom-0 start-0" target="_blank" href="{{$item1['Link']}}"> Przejdź do oferty</a>
                            
                           </div>
                         <div class="col-md-8">
@@ -113,6 +137,12 @@
     </div>
 </div>
 <br><br>
+@else
 
-@include('footer')
+<script type="text/javascript">
+    window.location.href = "http://localhost:8000/login";//here double curly bracket
+</script>
+
+@endif 
+
 @endsection

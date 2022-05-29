@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Praca inżynierska</title>
+    <title>KG-INŻ</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,9 +21,10 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm ">
+         
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
+                <a class="navbar-brand" href="{{ url('/') }}">
                    Strona Główna
                 </a>
 
@@ -39,9 +40,11 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto ">
                         <!-- Authentication Links -->
                         @guest
+
+                
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Logowanie') }}</a>
@@ -55,22 +58,37 @@
                             @endif
                         @else
                                 
-                                @if( Auth::user()->role)
+                        @if( Auth::user()->role)
                               
-
                                 <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('usersview') }}">Użytkownicy</a>
+                                </li>
+                             <li class="nav-item">
                             <a class="nav-link" href="{{ route('cars1.form') }}">Dodaj samochód</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('deletecar.carsToDelete') }}">Usuń samochód</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('viewcars.viewcars') }}">Samochody</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('savedcars.saved') }}">Zapisane samochody</a>
+                        </li>  
+                        <li class="nav-item">
+                           <a></a>
                         </li>
+                   
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" ><b>Administrator:</b></a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" hidden href="{{ route('mycar.mycarphp') }}">Dobrany samochód</a>
                         </li>
+
                         @else
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('viewcars.viewcars') }}">Samochody</a>
                         </li>
@@ -78,14 +96,14 @@
                             <a class="nav-link" href="{{ route('savedcars.saved') }}">Zapisane samochody</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" hiiden href="{{ route('mycar.mycarphp') }}">Dobrany samochód</a>
+                            <a class="nav-link" hidden href="{{ route('mycar.mycarphp') }}">Dobrany samochód</a>
                         </li>
                         @endif
                        
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->email }}
+                                   <b> {{ Auth::user()->email }} </b>
                                 </a>
                                 
 
@@ -113,5 +131,7 @@
             @yield('content')
         </main>
     </div>
+    @include('footer')
 </body>
+
 </html>

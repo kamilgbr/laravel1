@@ -13,6 +13,6 @@ class UserCar extends Eloquent
      
         'id_samochodu',
         'id_uzytkownika',
-  
+      
     ];
 }

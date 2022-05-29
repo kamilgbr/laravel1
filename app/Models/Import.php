@@ -5,24 +5,19 @@ namespace App\Models;
 
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class Cars1 extends Eloquent
+class Import extends Eloquent
 {
   
 protected $connection ='mongodb';
-protected $table = 'Samochody';
- //protected $table = 'Prezentacja';
+protected $table = 'ImportTest';
 
 protected $fillable = [
     
-    'Link',
     'LinkIMG',
-    'Cena',
     'Marka_pojazdu',
     'Model_pojazdu',
-    'Rok_produkcji',
-    'Przebieg',
-    'Rodzaj_paliwa',
     'Pojemność_skokowa',
+    'Rodzaj_paliwa',
     'Moc',
     'Skrzynia_biegów',
     'Napęd',
@@ -30,6 +25,7 @@ protected $fillable = [
     'Liczba_drzwi',
     'Liczba_miejsc',
     'Kolor',
+    'Kraj_pochodzenia',
     'Strona',
 ];
 

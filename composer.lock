@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cdfa99894bcd6fbc42eb42d021e5be30",
+    "content-hash": "3c48282c95428d98af2006ec31fa0d5e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2119,6 +2119,65 @@
             "time": "2021-11-21T11:48:40+00:00"
         },
         {
+            "name": "maatwebsite/excel",
+            "version": "v1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Maatwebsite/Laravel-Excel.git",
+                "reference": "0c67aba8387726458d42461eae91a3415593bbc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/0c67aba8387726458d42461eae91a3415593bbc4",
+                "reference": "0c67aba8387726458d42461eae91a3415593bbc4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "phpoffice/phpexcel": "~1.8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "orchestra/testbench": "~2.2.0@dev",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Maatwebsite\\Excel\\": "src/"
+                },
+                "classmap": [
+                    "src/Maatwebsite/Excel",
+                    "tests/TestCase.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Maatwebsite.nl",
+                    "email": "patrick@maatwebsite.nl"
+                }
+            ],
+            "description": "An eloquent way of importing and exporting Excel and CSV in Laravel 4 with the power of PHPExcel",
+            "keywords": [
+                "PHPExcel",
+                "batch",
+                "csv",
+                "excel",
+                "export",
+                "import",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/Maatwebsite/Laravel-Excel/issues",
+                "source": "https://github.com/Maatwebsite/Laravel-Excel/tree/master"
+            },
+            "time": "2014-07-10T09:06:07+00:00"
+        },
+        {
             "name": "mongodb/mongodb",
             "version": "1.10.1",
             "source": {
@@ -2739,6 +2798,68 @@
                 "source": "https://github.com/dompdf/php-svg-lib/tree/0.4.0"
             },
             "time": "2021-12-17T14:08:35+00:00"
+        },
+        {
+            "name": "phpoffice/phpexcel",
+            "version": "1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPOffice/PHPExcel.git",
+                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPOffice/PHPExcel/zipball/372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
+                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xml": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PHPExcel": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Maarten Balliauw",
+                    "homepage": "http://blog.maartenballiauw.be"
+                },
+                {
+                    "name": "Mark Baker"
+                },
+                {
+                    "name": "Franck Lefevre",
+                    "homepage": "http://blog.rootslabs.net"
+                },
+                {
+                    "name": "Erik Tilt"
+                }
+            ],
+            "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
+            "homepage": "http://phpexcel.codeplex.com",
+            "keywords": [
+                "OpenXML",
+                "excel",
+                "php",
+                "spreadsheet",
+                "xls",
+                "xlsx"
+            ],
+            "support": {
+                "issues": "https://github.com/PHPOffice/PHPExcel/issues",
+                "source": "https://github.com/PHPOffice/PHPExcel/tree/master"
+            },
+            "abandoned": "phpoffice/phpspreadsheet",
+            "time": "2015-05-01T07:00:55+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -3518,6 +3639,142 @@
                 "source": "https://github.com/sabberworm/PHP-CSS-Parser/tree/8.4.0"
             },
             "time": "2021-12-11T13:40:54+00:00"
+        },
+        {
+            "name": "spatie/laravel-cookie-consent",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-cookie-consent.git",
+                "reference": "01db8a42ba379489279b849d8def306e0886c04a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-cookie-consent/zipball/01db8a42ba379489279b849d8def306e0886c04a",
+                "reference": "01db8a42ba379489279b849d8def306e0886c04a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/cookie": "^8.0|^9.0",
+                "illuminate/support": "^8.0|^9.0",
+                "illuminate/view": "^8.0|^9.0",
+                "php": "^8.0",
+                "spatie/laravel-package-tools": "^1.9"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.9",
+                "orchestra/testbench": "^6.0|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\CookieConsent\\CookieConsentServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\CookieConsent\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Willem Van Bockstal",
+                    "email": "willem@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Make your Laravel app comply with the crazy EU cookie law",
+            "homepage": "https://github.com/spatie/cookie-consent",
+            "keywords": [
+                "comply",
+                "cookie",
+                "cookie-consent",
+                "eu",
+                "law",
+                "spatie"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/laravel-cookie-consent/tree/3.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2022-01-14T07:57:12+00:00"
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.11.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "16a8de828e7f1f32d580c667e1de5bf2943abd6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/16a8de828e7f1f32d580c667e1de5bf2943abd6b",
+                "reference": "16a8de828e7f1f32d580c667e1de5bf2943abd6b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^7.0|^8.0|^9.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^5.0|^6.23|^7.0",
+                "phpunit/phpunit": "^9.4",
+                "spatie/test-time": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.11.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-22T08:55:13+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

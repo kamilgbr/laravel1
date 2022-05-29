@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cars1;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 
@@ -10,7 +11,9 @@ class Cars1Controller extends Controller
 {
     public function form(){
 
-        return view('cars1.form');
+        $user = User::all();
+
+        return view('cars1.form', compact('user'));
     }
 
 
